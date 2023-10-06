@@ -5,19 +5,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
   <title>Stats preview card component</title>
 </head>
 
 <body>
+  <main>
+    <div class="card-media">
+      <picture>
+        <source src="./assets/images/image-header-desktop.jpg" media="min-width(375px)" />
+        <img src="./assets/images/image-header-mobile.jpg" alt="Card header image" />
+      </picture>
+    </div>
+    <div class="card-content">
+      <h1 class="card-title">
+        Get <span class='text-primary'>insights</span> that help your business grow.
+      </h1>
+      <p class="card-text">
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer
+        experience, and overall efficiency.
 
-  Get insights that help your business grow.
+      </p>
+      <div class="card-stats">
+        <div class="stat-item">
+          <p class="value">10k+</p>
+          <h3 class="title">companies</h3>
+        </div>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer
-  experience, and overall efficiency.
+        <div class="stat-item">
+          <p class="value">314</p>
+          <h3 class="title">templates</h3>
+        </div>
 
-  10k+ companies
-  314 templates
-  12m+ queries
+        <div class="stat-item">
+          <p class="value">12m+</p>
+          <h3 class="title">queries</h3>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>

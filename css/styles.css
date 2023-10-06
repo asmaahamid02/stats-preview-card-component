@@ -10,18 +10,148 @@
   --slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
 }
 
+/*Reset*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /*Body*/
 body {
-  min-height: 100vh;
+  min-height: calc(100vh - 2em);
   font-size: 15px;
+  background: var(--very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  font-family: 'Inter', sans-serif;
 }
 
 /*Utils*/
+.text-primary {
+  color: var(--soft-violet-ccent);
+}
+
+h1,
+h3,
+p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.15em;
+}
 
 /*Main*/
+main {
+  width: 100%;
+  background: var(--dark-desaturated-blue);
+  border-radius: 0.5em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
-/*Active state*/
+.card-media {
+  height: 17em;
+  position: relative;
+  background: var(--soft-violet-ccent);
+}
+
+.card-media img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+}
+
+/* .card-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: hsla(277, 63%, 41%, 0.7);
+  z-index: 1;
+} */
+
+.card-content {
+  padding: calc(4.67em / 2) calc(2.3em / 2);
+}
+
+.card-title {
+  color: var(--white-main-heading);
+}
+
+.card-text {
+  margin: 1.5em 0 2em 0;
+  color: var(--slightly-transparent-white-main-paragraph);
+  line-height: 1.8;
+  font-weight: 400;
+  font-size: 1.145em;
+}
+
+.card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.stat-item > .title {
+  color: var(--slightly-transparent-white-stat-headings);
+  text-transform: uppercase;
+  font-family: 'Lexend Deca';
+  font-weight: 400;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
+}
+
+.stat-item > .value {
+  color: var(--white-main-heading);
+  font-weight: 700;
+  font-size: 1.7em;
+  margin-bottom: 0.3em;
+}
 
 /*Media Queries*/
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 600px) {
+  h1,
+  h3,
+  p {
+    text-align: left;
+  }
+
+  main {
+    flex-direction: row-reverse;
+    justify-content: center;
+    max-width: 65em;
+  }
+
+  .card-media {
+    height: auto;
+  }
+
+  .card-content {
+    padding: 3em 6em 3em 3em;
+  }
+
+  .card-text {
+    font-size: 1em;
+  }
+
+  .card-stats {
+    margin-top: 4em;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-width: 860px) {
+  .card-media {
+    flex-basis: 45%;
+    flex-shrink: 0;
+  }
 }
