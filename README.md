@@ -55,8 +55,6 @@ I learned how to use pseudo-elements and how to use them to create an overlay on
 
 ## Author
 
-- Website - [Asmaa Hamid](https://www.your-site.com)
+- Website - [Asmaa Hamid](https://linktr.ee/asmaahamid02)
 - Frontend Mentor - [@asmaahamid02](https://www.frontendmentor.io/profile/asmaahamid02)
-- LinkedIn - [Asmaa Hamid](https://www.linkedin.com/in/asmaa-hamid-4656a4288/)
-- Instagram - [@asmaa.codes](https://www.instagram.com/asmaa.codes/)
-- TikTok - [@asmaa.codes](https://www.tiktok.com/@asmaa.codes)
+
